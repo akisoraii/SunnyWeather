@@ -11,7 +11,7 @@ import kotlin.coroutines.suspendCoroutine
 /**
  * 项目名称：SunnyWeather
  * 类 名 称：SunnyWeatherNetWork
- * 类 描 述：TODO
+ * 类 描 述：天气api接口
  * 创建时间：2020/9/3 16:35
  * 创 建 人：akisora
  */

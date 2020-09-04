@@ -13,7 +13,8 @@ import android.content.Context
 class SunnyWeatherApplication : Application() {
     companion object{
         lateinit var context : Context
-        const val TOKEN = "xxxxxxxxxxxxxx"
+        //临时的TOKEN TAkhjf8d1nlSlspN
+        const val TOKEN = "TAkhjf8d1nlSlspN"
     }
     override fun onCreate() {
         super.onCreate()
