@@ -11,14 +11,14 @@ import kotlin.coroutines.suspendCoroutine
 /**
  * 项目名称：SunnyWeather
  * 类 名 称：SunnyWeatherNetWork
- * 类 描 述：天气api接口
+ * 类 描 述：天气所有api网络请求封装类
  * 创建时间：2020/9/3 16:35
  * 创 建 人：akisora
  */
 object SunnyWeatherNetWork {
-    //创建placeService接口
+    //placeService接口封装
     private val placeService = ServiceCreator.create<PlaceService>()
-
+    //查询地区接口
     suspend fun searchPlaces(quary : String) = placeService.searchPlaces(quary).await()
 
     private suspend fun <T> Call<T>.await() : T {
@@ -41,4 +41,12 @@ object SunnyWeatherNetWork {
             )
         }
     }
+    //weatherService接口封装
+    private val weatherService = ServiceCreator.create<WeatherService>()
+    //获取实况天气接口
+    suspend fun getRealtimeWeather(lng : String,lat : String)
+            = weatherService.getRealtimeWeather(lng,lat).await()
+    //获取每日天气接口
+    suspend fun getDailyWeather(lng : String,lat : String)
+            = weatherService.getDailyWeather(lng,lat).await()
 }

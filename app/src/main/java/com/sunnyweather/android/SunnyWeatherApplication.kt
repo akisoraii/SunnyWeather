@@ -14,7 +14,8 @@ class SunnyWeatherApplication : Application() {
     companion object{
         lateinit var context : Context
         //临时的TOKEN TAkhjf8d1nlSlspN
-        const val TOKEN = "TAkhjf8d1nlSlspN"
+        //个人的TOKEN DoV97eTE0pq0Xc5p
+        const val TOKEN = "DoV97eTE0pq0Xc5p"
     }
     override fun onCreate() {
         super.onCreate()
